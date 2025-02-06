@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "expense-tracker": {
+          purple: "#542344",
+          "medium-purple": "#C270A4",
+          "light-purple": "#F9F1F6",
+          neon: "#F0F757",
+        },
       },
     },
   },
