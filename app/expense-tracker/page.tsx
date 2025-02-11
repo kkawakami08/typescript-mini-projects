@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { FormEvent, useState } from "react";
 import ExpenseList from "@/components/expense-tracker/ExpenseList";
 import ExpenseListFilter from "@/components/expense-tracker/ExpenseListFilter";
+import Link from "next/link";
 
 export interface Expense {
   id: string;
@@ -55,7 +56,21 @@ const ExpenseTracker = () => {
   };
 
   return (
-    <div className="bg-expense-tracker-purple min-h-screen p-5 flex flex-col items-center ">
+    <div className="bg-expense-tracker-purple min-h-screen p-5 flex flex-col items-center relative">
+      <Link href={"/"} className="absolute left-2 top-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="size-8 text-expense-tracker-neon hover:text-expense-tracker-medium-purple transition"
+        >
+          <path
+            fillRule="evenodd"
+            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </Link>
       <h2 className="text-5xl font-extrabold text-expense-tracker-neon mb-10">
         Expense Tracker
       </h2>
@@ -163,18 +178,21 @@ const ExpenseTracker = () => {
           Add Expense
         </button>
       </form>
-      {expenses.length !== 0 && (
-        <ExpenseListFilter
-          categories={categories}
-          onSelectCategories={handleSelectCategories}
-        />
-      )}
 
-      <ExpenseList
-        expenses={expenses}
-        handleDelete={handleDelete}
-        categoryFilter={categoryFilter}
-      />
+      <div className="mt-10 mb-3 w-full md:max-w-4xl flex flex-col">
+        {expenses.length !== 0 && (
+          <ExpenseListFilter
+            categories={categories}
+            onSelectCategories={handleSelectCategories}
+          />
+        )}
+
+        <ExpenseList
+          expenses={expenses}
+          handleDelete={handleDelete}
+          categoryFilter={categoryFilter}
+        />
+      </div>
     </div>
   );
 };

@@ -8,7 +8,8 @@ const ExpenseListFilter = ({ categories, onSelectCategories }: Props) => {
     <select
       name="category-filter"
       onChange={(e) => onSelectCategories(e.target.value)}
-      className="rounded-lg px-3 py-2 border border-expense-tracker-medium-purple focus:outline-expense-tracker-neon text-expense-tracker-purple col-start-4 self-end mt-5 mb-3"
+      className="rounded-lg px-3 py-2 border border-expense-tracker-medium-purple focus:outline-expense-tracker-neon text-center text-expense-tracker-purple   self-end mb-2
+      "
     >
       <option value="all" className="">
         All
