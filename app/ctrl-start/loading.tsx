@@ -1,14 +1,14 @@
-// app/loading.jsx
-"use client";
-// import ClipLoader from "react-spinners/ClipLoader";
-
-// const override = {
-//   display: "block",
-//   margin: "100px auto",
-// };
+import SkeletonCard from "@/components/ctrl-start/SkeletonCard";
 
 const LoadingPage = () => {
-  return <p>LOADING</p>;
+  return (
+    <div className="flex flex-col gap-5 py-5 items-center">
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+    </div>
+  );
 };
 
 export default LoadingPage;

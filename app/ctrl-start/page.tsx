@@ -1,9 +1,7 @@
-import { fetchGames } from "@/lib/rawg";
+import GameGrid from "@/components/ctrl-start/GameGrid";
 
 const ctrlStartHome = async () => {
-  const games = await fetchGames();
-
-  return <div>Hi</div>;
+  return <GameGrid />;
 };
 
 export default ctrlStartHome;

@@ -1,15 +1,19 @@
+export interface FetchGamesResponse {
+  count: number;
+  results: Game[];
+}
+
 export interface Game {
   id: number;
   name: string;
-  released: string;
+  // released: string;
   background_image: string;
-  platforms: Platform[];
+  parent_platforms: Platform[];
+  esrb_rating: { id: number; name: string };
 }
 
-interface Platform {
+export interface Platform {
   platform: {
-    id: number;
-    name: string;
     slug: string;
   };
 }
