@@ -1,4 +1,9 @@
-import { Game, GameDetails, FetchGamesResponse } from "@/types/rawg-types";
+import {
+  Game,
+  GameDetails,
+  FetchGamesResponse,
+  FetchGenresResponse,
+} from "@/types/rawg-types";
 
 const RAWG_API_KEY = process.env.NEXT_PUBLIC_RAWG_API_KEY;
 const RAWG_BASE_URL = "https://api.rawg.io/api";
@@ -21,6 +26,15 @@ export const fetchGame = async (
   if (!res.ok) throw new Error("Failed to fetch data from RAWG");
 
   return res.json();
+};
+
+export const fetchGenres = async (): Promise<FetchGenresResponse> => {
+  const res = await fetch(`${RAWG_BASE_URL}/genres?key=${RAWG_API_KEY}`);
+  if (!res.ok) throw new Error("Failed to fetch data from RAWG");
+
+  const data: FetchGenresResponse = await res.json();
+
+  return data;
 };
 
 export const getCroppedImageUrl = (url: string) => {

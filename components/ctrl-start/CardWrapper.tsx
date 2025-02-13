@@ -9,9 +9,9 @@ const CardWrapper = ({ children, bgImg = null }: Props) => {
   return (
     <div
       style={{ backgroundImage: `url(${bgImg})` }}
-      className="bg-cover bg-center min-h-60 max-w-[26rem] min-w-[22rem] relative rounded-2xl overflow-hidden"
+      className="bg-cover  h-60 w-[26rem] md:w-full relative rounded-2xl overflow-hidden"
     >
-      <div className="bg-gradient-to-t min-h-60 from-black/50 to-transparent p-5 ">
+      <div className="bg-gradient-to-t h-60 from-black/50 to-transparent p-5 ">
         {" "}
         {children}
       </div>

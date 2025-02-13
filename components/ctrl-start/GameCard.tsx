@@ -11,7 +11,7 @@ interface Props {
 const GameCard = ({ game }: Props) => {
   return (
     <CardWrapper bgImg={getCroppedImageUrl(game.background_image)}>
-      <div className="min-h-60 grid grid-cols-3 ">
+      <div className="h-full grid grid-cols-3 ">
         <PlatformsDisplay platforms={game.parent_platforms} />
         <p className="text-white text-2xl font-bold row-start-2 col-span-3  self-end text-center">
           {game.name}

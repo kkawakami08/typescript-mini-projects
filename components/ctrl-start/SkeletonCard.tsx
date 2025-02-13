@@ -2,10 +2,10 @@ import { FaImage } from "react-icons/fa";
 
 const SkeletonCard = () => {
   return (
-    <div className="bg-gray-100/70 min-h-60 max-w-[26rem] min-w-[22rem] relative rounded-2xl overflow-hidden p-5 ">
-      <div className="animate-pulse">
-        <FaImage className="absolute top-24 left-36 text-gray-200 size-20" />
-        <div className="min-h-60 grid grid-cols-3 ">
+    <div className="bg-gray-100/70 h-60 w-[26rem] relative rounded-2xl overflow-hidden p-5 ">
+      <div className="animate-pulse h-full">
+        <FaImage className="absolute top-20 left-44 text-gray-200 size-20" />
+        <div className="h-full grid grid-cols-3 ">
           <div className="bg-gray-100/50 text-ctrl-start-green-900 rounded-lg h-fit flex justify-between p-2">
             <div className="size-5 bg-gray-100 rounded-lg"></div>
             <div className="size-5 bg-gray-100 rounded-lg"></div>

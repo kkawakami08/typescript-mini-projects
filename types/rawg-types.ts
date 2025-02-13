@@ -3,6 +3,11 @@ export interface FetchGamesResponse {
   results: Game[];
 }
 
+export interface FetchGenresResponse {
+  count: number;
+  results: Genre[];
+}
+
 export interface Game {
   id: number;
   name: string;
@@ -23,4 +28,9 @@ export interface GameDetails extends Game {
   esrb_rating: { name: string };
   genres: { name: string }[];
   rating: number;
+}
+
+export interface Genre {
+  id: number;
+  name: string;
 }
