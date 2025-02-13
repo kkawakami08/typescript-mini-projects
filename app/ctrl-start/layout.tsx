@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const CtrlStartLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <section
-      className={`min-h-screen bg-ctrl-start-green-700 p-5 lg:p-0 lg:grid lg:grid-cols-7 `}
+      className={`min-h-screen bg-ctrl-start-green-700 p-5 lg:p-0 lg:grid lg:grid-cols-7  xl:grid-cols-[11rem,11rem,1fr]`}
     >
       <Aside />
       <Nav />

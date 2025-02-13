@@ -1,11 +1,6 @@
-export interface FetchGamesResponse {
+export interface FetchGenericResponse<T> {
   count: number;
-  results: Game[];
-}
-
-export interface FetchGenresResponse {
-  count: number;
-  results: Genre[];
+  results: T[];
 }
 
 export interface Game {
@@ -33,4 +28,5 @@ export interface GameDetails extends Game {
 export interface Genre {
   id: number;
   name: string;
+  image_background: string;
 }
