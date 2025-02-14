@@ -8,14 +8,14 @@ export interface Game {
   name: string;
   // released: string;
   background_image: string;
-  parent_platforms: Platform[];
+  parent_platforms: { platform: Platform }[];
   esrb_rating: { id: number; name: string };
 }
 
 export interface Platform {
-  platform: {
-    slug: string;
-  };
+  slug: string;
+  id: number;
+  name: string;
 }
 
 export interface GameDetails extends Game {
@@ -28,5 +28,6 @@ export interface GameDetails extends Game {
 export interface Genre {
   id: number;
   name: string;
+  slug: string;
   image_background: string;
 }

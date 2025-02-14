@@ -16,9 +16,6 @@ const GameCard = ({ game }: Props) => {
         <p className="text-white text-2xl font-bold row-start-2 col-span-3  self-end text-center">
           {game.name}
         </p>
-        <p className="bg-[#FF7F11] text-ctrl-start-green-900 rounded-lg place-self-end self-start w-10 flex items-center justify-center h-10 text-3xl font-extrabold  col-start-3 ">
-          {game.esrb_rating.name[0]}
-        </p>
       </div>
     </CardWrapper>
   );
